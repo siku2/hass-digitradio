@@ -1,9 +1,11 @@
 {
   "domain": "digitradio",
   "name": "DigitRadio",
-  "requirements": ["afsapi==0.0.4"],
+  "documentation": "",
+  "dependencies": [],
   "codeowners": [],
   "config_flow": true,
+  "requirements": ["afsapi==0.0.4"],
   "ssdp": [
     {
       "manufacturer": "TechniSat",
