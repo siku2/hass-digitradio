@@ -1,3 +1,4 @@
+import logging
 from urllib.parse import urlparse
 
 import voluptuous as vol
@@ -7,12 +8,17 @@ from homeassistant.const import CONF_HOST
 
 from .const import DOMAIN
 
+_LOGGER = logging.getLogger(__name__)
 
-class ExampleConfigFlow(ConfigFlow, domain=DOMAIN):
+
+class DigitRadioConfigFlow(ConfigFlow, domain=DOMAIN):
     async def async_step_ssdp(self, info):
         name = info[ssdp.ATTR_UPNP_FRIENDLY_NAME]
         serial_number = info[ssdp.ATTR_UPNP_SERIAL]
         host = urlparse(info[ssdp.ATTR_SSDP_LOCATION]).hostname
+
+        _LOGGER.info("discovered digitradio: %s (%s) @ %s",
+                     name, serial_number, host)
 
         device_info = {
             "identifiers": {
