@@ -101,7 +101,6 @@ class AFSAPIDevice(MediaPlayerEntity):
 
     @property
     def should_poll(self):
-        """Device should be polled."""
         return True
 
     @property
@@ -182,7 +181,6 @@ class AFSAPIDevice(MediaPlayerEntity):
                 "playing": STATE_PLAYING,
                 "paused": STATE_PAUSED,
                 "stopped": STATE_IDLE,
-                "unknown": STATE_UNKNOWN,
                 None: STATE_IDLE,
             }.get(status, STATE_UNKNOWN)
         else:
