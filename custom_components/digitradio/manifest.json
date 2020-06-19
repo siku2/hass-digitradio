@@ -1,0 +1,13 @@
+{
+  "domain": "digitradio",
+  "name": "DigitRadio",
+  "requirements": ["afsapi==0.0.4"],
+  "codeowners": [],
+  "config_flow": true,
+  "ssdp": [
+    {
+      "manufacturer": "TechniSat",
+      "deviceType": "urn:schemas-upnp-org:device:MediaRenderer:1"
+    }
+  ]
+}
