@@ -2,8 +2,7 @@
   "title": "DigitRadio",
   "config": {
     "title": "DigitRadio",
-    "step": {
-    },
+    "step": {},
     "error": {}
   }
 }
