@@ -1,9 +1,8 @@
 {
   "domain": "digitradio",
   "name": "DigitRadio",
-  "documentation": "",
   "dependencies": [],
-  "codeowners": [],
+  "codeowners": ["siku2"],
   "config_flow": true,
   "requirements": ["afsapi==0.0.4"],
   "ssdp": [

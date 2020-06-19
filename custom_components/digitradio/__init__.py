@@ -11,13 +11,13 @@ async def async_setup(hass, config):
     return True
 
 
-async def async_setup_entry(hass, entry, _add_devices):
+async def async_setup_entry(hass, entry):
     for platform in PLATFORMS:
-        await hass.async_add_job(hass.config_entries.async_forward_entry_setup(entry, platform))
+        hass.async_create_task(hass.config_entries.async_forward_entry_setup(entry, platform))
 
     _LOGGER.info("entry setup done")
 
 
 async def async_remove_entry(hass, entry) -> None:
     for platform in PLATFORMS:
-        await hass.async_add_job(hass.config_entries.async_forward_entry_unload(entry, platform))
+        await hass.config_entries.async_forward_entry_unload(entry, platform)

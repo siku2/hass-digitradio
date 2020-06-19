@@ -1,8 +1,7 @@
 import logging
 
-import requests
-
 import homeassistant.helpers.config_validation as cv
+import requests
 import voluptuous as vol
 from afsapi import AFSAPI
 from homeassistant.components.media_player import (PLATFORM_SCHEMA,
