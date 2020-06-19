@@ -1,3 +1,5 @@
+> As of right now this component is not usable unless you're prepared to do some hacking (don't).
+
 # DigitRadio
 
 A custom component for TechniSat's DigitRadio which is based on the Frontier Silicon chip.
