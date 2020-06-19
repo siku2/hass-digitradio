@@ -7,7 +7,7 @@
   "ssdp": [
     {
       "manufacturer": "TechniSat",
-      "deviceType": "urn:schemas-upnp-org:device:MediaRenderer:1"
+      "modelName": "DigitRadio 110 IR"
     }
   ]
 }
